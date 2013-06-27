@@ -24,7 +24,7 @@ export EDITOR=vim
 # zsh
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(git bundler brew gem)
+plugins=(git bundler brew gem namixdorf)
 
 ZSH_THEME="robbyrussell"
 
