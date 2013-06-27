@@ -1,0 +1,18 @@
+# ~/.tmuxinator/nursingald.yml
+# you can make as many tabs as you wish...
+
+project_name: nursingald
+project_root: ~/Sites/nursingald
+pre: start_postgres
+tabs:
+  - editor:
+      layout: 210f,211x96,0,0[211x38,0,0,0,211x32,0,39,7,211x24,0,72{105x24,0,72,5,105x24,106,72,10}]
+      panes:
+        - vim
+        - vim
+        - #empty
+        - #empty
+  - shell: #git pull
+  - server: bundle exec rails s -p 3001
+  - logs: tail -f log/development.log
+  - console: bundle exec rails c

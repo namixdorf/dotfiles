@@ -1,0 +1,8 @@
+[user]
+	name = Nick Mixdorf
+	email = namixdorf@gmail.com
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
