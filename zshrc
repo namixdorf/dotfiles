@@ -15,6 +15,8 @@ alias stop_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgre
 
 alias tnursingald="tmuxinator nursingald"
 
+alias rspec="nocorrect rspec"
+
 # recommended by brew doctor
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
 
@@ -24,14 +26,20 @@ export EDITOR=vim
 # zsh
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(git bundler brew gem namixdorf)
+plugins=(git brew gem namixdorf)
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="afowler"
 
 source $ZSH/oh-my-zsh.sh
 #tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-eval "$(rbenv init -)"
+
+RUBIES=(~/.rbenv/versions/*)
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+
+# set default ruby
+chruby ruby-1.9.3
+#eval "$(rbenv init -)"
 # DO NOT EDIT BELOW THIS LINE
 

@@ -1,0 +1,16 @@
+# ~/.tmuxinator/etablet.yml
+# you can make as many tabs as you wish...
+
+project_name: Epsilon Manager
+project_root: ~/Sites/Epsilon-Manager-Tablet
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - #empty, will just run plain bash
+        - #
+  - database: rails db
+  - server: rails s
+  - logs: tail -f logs/development.log
+  - console: rails c
