@@ -1,6 +1,4 @@
-alias ald_production="ssh -p 32133 deployer@198.211.100.139"
-alias ald_staging="ssh -p 32133 deployer@198.211.107.232"
-
+source ~/.private
 function rvm () {
   if [[ $1 == 'use' ]]; then
     rbenv shell $2
@@ -13,9 +11,20 @@ alias vi="/usr/local/Cellar/vim/7.3.923/bin/vim"
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
 
-alias tnursingald="tmuxinator nursingald"
+alias start_mysql="mysql.server start"
+alias stop_mysql="mysql.server stop"
+
+alias start_memcached="/usr/local/opt/memcached/bin/memcached"
 
 alias rspec="nocorrect rspec"
+
+alias be="bundle exec"
+alias rreseed='be rake db:migrate:reset && be rake db:seed_fu && be rake db:test:prepare'
+alias rtests="be rspec"
+
+alias rrrseedtest="rreseed && rtests"
+
+alias reloadbash="source ~/.zshrc"
 
 # recommended by brew doctor
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
