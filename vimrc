@@ -54,7 +54,7 @@ let mapleader=","
 :set timeout timeoutlen=1000 ttimeoutlen=100
 
 " User jj to get out of insert mode
-:imap jj <Esc>
+imap jj <Esc>
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -67,6 +67,9 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" Map savings.
+:map <C-s> <esc>:w<CR>
+:imap <C-s> <esc>:w<CR>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>

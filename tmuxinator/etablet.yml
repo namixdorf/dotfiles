@@ -3,13 +3,13 @@
 
 project_name: Epsilon Manager
 project_root: ~/Sites/Epsilon-Manager-Tablet
+pre: rbenv local 1.9.3-p429
 tabs:
   - editor:
-      layout: main-vertical
+      layout: main-horizontal
       panes:
-        - vim
+        - vim -p 70
         - #empty, will just run plain bash
-        - #
   - database: rails db
   - server: rails s
   - logs: tail -f logs/development.log

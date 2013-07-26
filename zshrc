@@ -5,8 +5,8 @@ function rvm () {
   fi
 }
 
-alias vim="/usr/local/Cellar/vim/7.3.923/bin/vim"
-alias vi="/usr/local/Cellar/vim/7.3.923/bin/vim"
+alias vim="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
+alias vi="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
 
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
@@ -44,11 +44,11 @@ source $ZSH/oh-my-zsh.sh
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 
-RUBIES=(~/.rbenv/versions/*)
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+#RUBIES=(~/.rbenv/versions/*)
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 # set default ruby
-chruby ruby-1.9.3
-#eval "$(rbenv init -)"
+#chruby ruby-1.9.3
+eval "$(rbenv init -)"
 # DO NOT EDIT BELOW THIS LINE
 
