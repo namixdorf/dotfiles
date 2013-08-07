@@ -40,15 +40,10 @@ plugins=(git brew gem namixdorf)
 ZSH_THEME="afowler"
 
 source $ZSH/oh-my-zsh.sh
-#tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
+#source ~/.zshenv
 
-#RUBIES=(~/.rbenv/versions/*)
-#source /usr/local/opt/chruby/share/chruby/chruby.sh
-
+export PATH="$HOME/.rbenv/bin:$PATH"
 # set default ruby
-#chruby ruby-1.9.3
 eval "$(rbenv init -)"
 # DO NOT EDIT BELOW THIS LINE
-

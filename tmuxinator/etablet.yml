@@ -2,15 +2,17 @@
 # you can make as many tabs as you wish...
 
 project_name: Epsilon Manager
-project_root: ~/Sites/Epsilon-Manager-Tablet
-pre: rbenv local 1.9.3-p429
-tabs:
+project_root: ~/Documents/apps/Epsilon/tablet/website
+pre: 
+  - export RBENV_DIR=
+  - export RBENV_VERSION=1.9.3-p429
+pre_window: rbenv local 1.9.3-p429
+windows:
   - editor:
       layout: main-horizontal
       panes:
         - vim -p 70
         - #empty, will just run plain bash
-  - database: rails db
-  - server: rails s
-  - logs: tail -f logs/development.log
-  - console: rails c
+  - database: be rails db
+  - logs: tail -f log/development.log
+  - console: be rails c
