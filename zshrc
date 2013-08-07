@@ -42,7 +42,9 @@ ZSH_THEME="afowler"
 source $ZSH/oh-my-zsh.sh
 
 #source ~/.zshenv
-
+#
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/share/chruby/auto.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 # set default ruby
 eval "$(rbenv init -)"
