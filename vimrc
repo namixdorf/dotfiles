@@ -1,7 +1,28 @@
-" Example Vim configuration.
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required! 
+Plugin 'gmarik/vundle'
+
+"  More Bundles to install
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
+
+call vundle#end()
+filetype plugin indent on  " required  by vundle Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
-set nocompatible                  " Must come first because it changes other options.
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -93,26 +114,4 @@ let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 " autocmd FileType ruby setlocal foldmethod=syntax
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 "
-set nocompatible               " be iMproved
-filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-"  More Bundles to install
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mattn/zencoding-vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'jgdavey/tslime.vim'
-
-
-filetype plugin indent on  " required  by vundle

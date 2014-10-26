@@ -5,8 +5,8 @@ function rvm () {
   fi
 }
 
-alias vim="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
-alias vi="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
+#alias vim="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
+#alias vi="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
 
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
@@ -41,6 +41,8 @@ ZSH_THEME="afowler"
 
 source $ZSH/oh-my-zsh.sh
 
+prax start
+
 #source ~/.zshenv
 #
 #source /usr/local/opt/chruby/share/chruby/chruby.sh
@@ -49,3 +51,4 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # set default ruby
 eval "$(rbenv init -)"
 # DO NOT EDIT BELOW THIS LINE
+
