@@ -5,7 +5,9 @@ function rvm () {
   fi
 }
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+#alias vim="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
+#alias vi="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
+
 
 alias vi="vim"
 
@@ -49,15 +51,17 @@ ZSH_THEME="afowler"
 
 source $ZSH/oh-my-zsh.sh
 
+prax start
+
 #source ~/.zshenv
 #
 #source /usr/local/opt/chruby/share/chruby/chruby.sh
 #source /usr/local/share/chruby/auto.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=/usr/local/sbin:$PATH
 # set default ruby
 eval "$(rbenv init -)"
 # DO NOT EDIT BELOW THIS LINE
-export PATH=/usr/local/sbin:$PATH
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+
+
