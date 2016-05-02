@@ -19,7 +19,7 @@ set wildmode=list:longest         " Complete files like a shell.
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
-set number                        " Show line numbers.
+set relativenumber                        " Show line numbers.
 set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
@@ -53,8 +53,8 @@ let mapleader=","
 " Fix slow O inserts
 :set timeout timeoutlen=1000 ttimeoutlen=100
 
-" User jj to get out of insert mode
-imap jj <Esc>
+" User kj to get out of insert mode
+imap kj <Esc>
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>

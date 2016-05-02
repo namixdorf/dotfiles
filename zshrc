@@ -5,11 +5,13 @@ function rvm () {
   fi
 }
 
-alias vim="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
-alias vi="stty stop '' -ixoff ; /usr/local/Cellar/vim/7.3.923/bin/vim"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+alias vi="vim"
+
+alias start_postgres="pg_ctl -D /usr/local/var/postgres9.3 -l logfile start"
+alias stop_postgres="pg_ctl -D /usr/local/var/postgres9.3 -l logfile stop"
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias stop_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
 
 alias start_mysql="mysql.server start"
 alias stop_mysql="mysql.server stop"
@@ -26,8 +28,14 @@ alias rrrseedtest="rreseed && rtests"
 
 alias reloadbash="source ~/.zshrc"
 
+alias gca='git commit -v -a'
+
+alias gpush="git push -u origin master"
+
+alias cbundles='cd /Users/namixdorf/Library/Application\ Support/Avian/Bundles'
+
 # recommended by brew doctor
-export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/chef/embedded/bin:$PATH'
 
 #editor
 export EDITOR=vim
@@ -49,3 +57,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # set default ruby
 eval "$(rbenv init -)"
 # DO NOT EDIT BELOW THIS LINE
+export PATH=/usr/local/sbin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
